@@ -5,7 +5,8 @@ const Schema=mongoose.Schema;
 const SignUpModel = new Schema({
     username:{
         type:String,
-        required: true
+        required: true,
+        unique:true
     },
     password:{
         type:String,
@@ -13,7 +14,8 @@ const SignUpModel = new Schema({
     },
     mobileNumber:{
         type:Number,
-        required:true
+        required:true,
+        unique:true
     },
     dateOfBirth:{
         type:String,
