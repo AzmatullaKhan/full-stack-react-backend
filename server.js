@@ -4,6 +4,7 @@ import bodyParser from "body-parser"
 import mongoose from "mongoose"
 
 import { SignUpRouter } from './routes/SignUpRoutes.js'
+import { LoginRouter } from './routes/LoginRoutes.js'
 
 const server = express()
 
@@ -20,3 +21,4 @@ mongoose.connect(url)
 .catch((err)=>{console.log("Exception Occured")})
 
 server.use('/singUpServer', SignUpRouter)
+server.use('/loginServer', LoginRouter)
